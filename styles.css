@@ -19,7 +19,11 @@ header {
 }
 
 header h1 {
-    font-family: 'Roboto+Slab', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     color: #ffffff;
 
+}
+
+#control-box {
+    text-align: center;
 }
