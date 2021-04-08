@@ -5,6 +5,12 @@
     box-sizing: border-box; /*contagem a partir da borda*/
 }
 
+.conteiner{
+    width: min(90vw,800px);/*definir o tamanho do conteudo*/
+
+    margin: auto;
+}
+
 /* Body ==========================================================================*/
 body {
     background: #f0f2f5;
@@ -14,16 +20,18 @@ body {
 /* Header ==========================================================================*/
 header {
     background: #2a337c;
-    padding: 2rem 0;
+    padding: 2rem 0 10rem;
     text-align: center; /*alinhamento do conteudo centralizado*/
 }
 
-header h1 {
+#logo {
     font-family: 'Roboto Slab', sans-serif;
     color: #ffffff;
+    font-weight: 80; /*peso da fonte - espessura*/
 
 }
 
-#control-box {
+/* footer ==========================================================================*/
+footer{
     text-align: center;
 }
