@@ -1,8 +1,22 @@
-h1 {
-    color: rgb(21, 255, 0);
+/* Global ==========================================================================*/
+* {
+    margin: 0; /*espaçamentos dos elementos*/
+    padding: 0; /*preenchimento dos elementos*/
+    box-sizing: border-box; /*contagem a partir da borda*/
 }
 
-/* o asterisco antes significa seletor total*/
-* {
-    color: #dd7676;
+/* Body ==========================================================================*/
+body {
+    background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header ==========================================================================*/
+header {
+    background: #2d4a22;
+    padding: 
+}
+
+header h1 {
+    font-family: ;
 }
