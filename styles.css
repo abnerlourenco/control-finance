@@ -13,10 +13,13 @@ body {
 
 /* Header ==========================================================================*/
 header {
-    background: #2d4a22;
-    padding: 
+    background: #2a337c;
+    padding: 2rem 0;
+    text-align: center; /*alinhamento do conteudo centralizado*/
 }
 
 header h1 {
-    font-family: ;
+    font-family: 'Roboto+Slab', sans-serif;
+    color: #ffffff;
+
 }
