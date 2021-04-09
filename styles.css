@@ -1,4 +1,11 @@
 /* Global ==========================================================================*/
+:root {
+    --color-main: #0fb3c9;
+    --color-primary: #f0f2f5;
+    --color-secundary: #ffffff; 
+    --color-tertiary: #011149;
+}
+
 * {
     margin: 0; /*espaçamentos dos elementos*/
     padding: 0; /*preenchimento dos elementos*/
