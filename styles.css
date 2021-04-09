@@ -33,6 +33,7 @@
     /*min() vai sempre deixar o menor dos dois valores*/
     margin: auto;
 }
+
 /* Titles ==========================================================================*/
 h2{
     margin-top: 3.2rem;
@@ -41,6 +42,22 @@ h2{
 
     font-weight: normal;
 }
+/* Links and bottons ==========================================================================*/
+a {
+    color: var(--color-income);
+    opacity: 0.8;
+    text-decoration: none; /*remove o sublinhado*/
+}
+
+a:hover {
+    opacity: 1;
+}
+
+.button.new {
+    display: inline-block; /*para limitar acesso no botao*/
+    margin-bottom: 0.8rem; /*só vai funcionar se tiver display block*/
+}
+
 
 /* Body ==========================================================================*/
 body {
