@@ -4,8 +4,9 @@
     --color-primary: #f0f2f5;
     --color-secundary: #ffffff; 
     --color-tertiary: #011149;
-    --color-contrast: #83b1c7;
-    --color-green: rgb(25, 114, 3);
+    --color-contrast: #8bc8e4;
+    --color-income: #51c534;
+    --color-expense: #b83b3b;
 }
 
 * {/* select all components in document*/
@@ -30,7 +31,7 @@ h2{
 
 /* Body ==========================================================================*/
 body {
-    background: var(--color-primary);
+    background: var(--color-contrast);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -49,8 +50,7 @@ header {
 }
 /* Control Box ==========================================================================*/
 #control-box {
-    margin-top: -8rem;
-
+    margin-top: -8rem; /* posição do topo em relação ao elemento de cima*/
 }
 #fluxo {
     color:var(--color-secundary);
@@ -59,7 +59,7 @@ header {
 /* Cards ==========================================================================*/
 .card {
     font-family: 'Roboto Slab', sans-serif;
-    background: var(--color-contrast);
+    background: var(--color-primary);
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;  /*Arredondamento da borda*/
 
@@ -78,19 +78,77 @@ header {
     margin-top: 1rem;
 }
 
+.card.income p {
+    color: var(--color-income);
+}
+
+.card.expense p {
+    color: var(--color-expense);
+}
+
 .card.total {
-    background: var(--color-green);
+    background: var(--color-income);
     color: var(--color-secundary)
 }
 
 /* Table ==========================================================================*/
+#data-table {
+    color: var(--color-main);
+    width: 100%;
+    border-spacing: 0 0.5rem; /* espaçamento entre as bordas dos elementos - horizontal x vertical*/
+}
 
+table thead tr th:first-child, table tbody tr td:first-child {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
 
+table thead tr th:last-child, table tbody tr td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table tbody tr {
+    opacity: 0.7; /* opacidade do elemento*/
+}
+
+table tbody tr:hover {
+    opacity: 1;
+}
+
+table thead th{
+    background: var(--color-primary);
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    
+    text-align: left;
+}
+
+table tbody td{
+    background: var(--color-primary);
+
+    padding: 0.5rem 2rem;
+    font-weight: normal;
+}
+
+td.description {
+    color: var(--color-tertiary);
+}
+
+td.income {
+    color: var(--color-income);
+}
+
+td.expense {
+    color: var(--color-expense);
+}
 
 /* footer ==========================================================================*/
 footer{
     text-align: center;
     background: var(--color-main);
-    padding: 8rem 0 3rem;
-    margin-top: -4rem;
+    padding: 3rem 0 3rem;
+    margin-top: 3rem;
+}
+footer p {
+    color: var(--color-primary)
 }
