@@ -7,8 +7,16 @@
 
 .conteiner{
     width: min(90vw,800px);/*definir o tamanho do conteudo*/
-
+    /*min() vai sempre deixar o menor dos dois valores*/
     margin: auto;
+}
+/* Titles ==========================================================================*/
+h2{
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem; /* espaçamento abaixo dele*/
+    color: #011149;
+
+    font-weight: normal;
 }
 
 /* Body ==========================================================================*/
@@ -19,7 +27,7 @@ body {
 
 /* Header ==========================================================================*/
 header {
-    background: #2a337c;
+    background: #0fb3c9;
     padding: 2rem 0 10rem;
     text-align: center; /*alinhamento do conteudo centralizado*/
 }
@@ -27,9 +35,27 @@ header {
 #logo {
     font-family: 'Roboto Slab', sans-serif;
     color: #ffffff;
-    font-weight: 80; /*peso da fonte - espessura*/
+    font-weight: 200; /*peso da fonte - espessura*/
 
 }
+/* Control Box ==========================================================================*/
+#control-box {
+    margin-top: -8rem;
+
+}
+#fluxo {
+    color:white;
+    margin-top: 0;
+}
+/* Cards ==========================================================================*/
+.card {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;  /*Arredondamento da borda*/
+
+    margin-bottom: 2rem;
+}
+
 
 /* footer ==========================================================================*/
 footer{
