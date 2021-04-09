@@ -1,9 +1,11 @@
 /* Global ==========================================================================*/
 :root {
-    --color-main: #0fb3c9;
+    --color-main: #0f75c9;
     --color-primary: #f0f2f5;
     --color-secundary: #ffffff; 
     --color-tertiary: #011149;
+    --color-contrast: #83b1c7;
+    --color-green: rgb(25, 114, 3);
 }
 
 * {/* select all components in document*/
@@ -56,15 +58,39 @@ header {
 }
 /* Cards ==========================================================================*/
 .card {
-    background: var(--color-secundary);
+    font-family: 'Roboto Slab', sans-serif;
+    background: var(--color-contrast);
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;  /*Arredondamento da borda*/
 
     margin-bottom: 2rem;
 }
 
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;/*separação da linha - de uma linha até a outra*/
+
+    margin-top: 1rem;
+}
+
+.card.total {
+    background: var(--color-green);
+    color: var(--color-secundary)
+}
+
+/* Table ==========================================================================*/
+
+
 
 /* footer ==========================================================================*/
 footer{
     text-align: center;
+    background: var(--color-main);
+    padding: 8rem 0 3rem;
+    margin-top: -4rem;
 }
