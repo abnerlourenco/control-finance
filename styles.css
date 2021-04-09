@@ -82,6 +82,10 @@ header {
 .card h3 {
     font-weight: normal;
     font-size: 1rem;
+
+    display: flex; /*permite o comportamento inline dentro do elemento*/
+    align-items: center; /*alinhamento centro x centro */
+    justify-content: space-between; /*arranjar no eixo x o espaço entre os elementos*/
 }
 
 .card p {
