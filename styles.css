@@ -1,11 +1,11 @@
 /* Global ==========================================================================*/
 :root {
-    --color-main: #0f75c9;
-    --color-primary: #f0f2f5;
-    --color-secundary: #ffffff; 
+    --color-main: #ffffff;
+    --color-primary: #568aecb6;
+    --color-secundary: #161616; 
     --color-tertiary: #011149;
-    --color-contrast: #8bc8e4;
-    --color-income: #51c534;
+    --color-contrast: #9b999960;
+    --color-income: #3ba520;
     --color-expense: #b83b3b;
 }
 
@@ -37,14 +37,14 @@ body {
 
 /* Header ==========================================================================*/
 header {
-    background: var(--color-main);
+    background: var(--color-primary);
     padding: 2rem 0 10rem;
     text-align: center; /*alinhamento do conteudo centralizado*/
 }
 
 #logo {
     font-family: 'Roboto Slab', sans-serif;
-    color: var(--color-secundary);
+    color: var(--color-tertiary);
     font-weight: 200; /*peso da fonte - espessura*/
 
 }
@@ -59,10 +59,10 @@ header {
 /* Cards ==========================================================================*/
 .card {
     font-family: 'Roboto Slab', sans-serif;
-    background: var(--color-primary);
+    background: var(--color-main);
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;  /*Arredondamento da borda*/
-
+    
     margin-bottom: 2rem;
 }
 
@@ -93,7 +93,7 @@ header {
 
 /* Table ==========================================================================*/
 #data-table {
-    color: var(--color-main);
+    color: var(--color-tertiary);
     width: 100%;
     border-spacing: 0 0.5rem; /* espaçamento entre as bordas dos elementos - horizontal x vertical*/
 }
@@ -115,7 +115,7 @@ table tbody tr:hover {
 }
 
 table thead th{
-    background: var(--color-primary);
+    background: var(--color-main);
     font-family: 'Roboto Slab', sans-serif;
     font-weight: 600;
     padding: 1rem 2rem;
@@ -124,7 +124,7 @@ table thead th{
 }
 
 table tbody td{
-    background: var(--color-primary);
+    background: var(--color-main);
 
     padding: 0.5rem 2rem;
     font-weight: normal;
@@ -145,10 +145,10 @@ td.expense {
 /* footer ==========================================================================*/
 footer{
     text-align: center;
-    background: var(--color-main);
+    background: var(--color-primary);
     padding: 3rem 0 3rem;
     margin-top: 3rem;
 }
 footer p {
-    color: var(--color-primary)
+    color: var(--color-secundary)
 }
