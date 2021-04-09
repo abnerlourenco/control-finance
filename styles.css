@@ -15,6 +15,19 @@
     box-sizing: border-box; /*contagem a partir da borda*/
 }
 
+.sr-only{
+    position: absolute;
+    width: 1px; /* largura*/
+    height: 1px; /* altura*/
+    padding: 0; 
+    margin: -1px; /* margem*/
+    overflow: hidden; /*estado do elemento - hidden(escondido)*/
+    clip: rect(0, 0, 0, 0); /*o conteudo do elemento ficará contido dentro do elemento setado(0, 0, 0, 0)*/ 
+    white-space: nowrap; /*nowrap- nao permite espaços dentro do elemento*/
+    border-width: 0; /*espessura da borda do elemento*/
+
+}
+
 .conteiner{
     width: min(90vw,800px);/*definir o tamanho do conteudo*/
     /*min() vai sempre deixar o menor dos dois valores*/
@@ -52,8 +65,8 @@ header {
 #control-box {
     margin-top: -8rem; /* posição do topo em relação ao elemento de cima*/
 }
-#fluxo {
-    color:var(--color-secundary);
+#control-box h2 {
+    color: var(--color-secundary);
     margin-top: 0;
 }
 /* Cards ==========================================================================*/
