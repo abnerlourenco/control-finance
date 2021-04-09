@@ -6,7 +6,7 @@
     --color-tertiary: #011149;
 }
 
-* {
+* {/* select all components in document*/
     margin: 0; /*espaçamentos dos elementos*/
     padding: 0; /*preenchimento dos elementos*/
     box-sizing: border-box; /*contagem a partir da borda*/
@@ -21,27 +21,27 @@
 h2{
     margin-top: 3.2rem;
     margin-bottom: 0.8rem; /* espaçamento abaixo dele*/
-    color: #011149;
+    color: var(--color-tertiary);
 
     font-weight: normal;
 }
 
 /* Body ==========================================================================*/
 body {
-    background: #f0f2f5;
+    background: var(--color-primary);
     font-family: 'Poppins', sans-serif;
 }
 
 /* Header ==========================================================================*/
 header {
-    background: #0fb3c9;
+    background: var(--color-main);
     padding: 2rem 0 10rem;
     text-align: center; /*alinhamento do conteudo centralizado*/
 }
 
 #logo {
     font-family: 'Roboto Slab', sans-serif;
-    color: #ffffff;
+    color: var(--color-secundary);
     font-weight: 200; /*peso da fonte - espessura*/
 
 }
@@ -51,12 +51,12 @@ header {
 
 }
 #fluxo {
-    color:white;
+    color:var(--color-secundary);
     margin-top: 0;
 }
 /* Cards ==========================================================================*/
 .card {
-    background: white;
+    background: var(--color-secundary);
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;  /*Arredondamento da borda*/
 
