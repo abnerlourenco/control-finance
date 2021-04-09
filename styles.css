@@ -15,6 +15,10 @@
     box-sizing: border-box; /*contagem a partir da borda*/
 }
 
+html {
+    font-size: 93.75%;
+}
+
 .sr-only{
     position: absolute;
     width: 1px; /* largura*/
@@ -185,4 +189,16 @@ footer{
 }
 footer p {
     color: var(--color-secundary)
+}
+
+/* Resposive ==========================================================================*/
+@media (min-width: 800px) {/*siginifica: colocar um tamanho reduzido quando a largura do diplay ficar menor que 800px*/
+    html {
+        font-size: 87,5%;
+    }
+    #control-box {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; /*quantas frações firacará dividido os elementos*/ /*pode ser usado (repeat(3, 1fr))*/
+        gap: 2rem;
+    }
 }
