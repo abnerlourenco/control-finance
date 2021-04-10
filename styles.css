@@ -128,12 +128,18 @@ header {
     background: var(--color-income);
     color: var(--color-secundary)
 }
+/* Transaction ==========================================================================*/
+#transaction {
+    display: block; /*bloqueio a caixa que contem a tabela*/
+    overflow-x: auto; /*quando transborda algo fora da tela, pode-se usar overflow*/
+    /*significa que quando nescessário, no eixo x, permite deslisar para os lados*/
+}
 
 /* Table ==========================================================================*/
 #data-table {
     color: var(--color-tertiary);
     width: 100%;
-    border-spacing: 0 0.5rem; /* espaçamento entre as bordas dos elementos - horizontal x vertical*/
+    border-spacing: 0 0.5rem; /* espaçamento entre as bordas dos elementos - horizontal x vertical*/  
 }
 
 table thead tr th:first-child, table tbody tr td:first-child {
@@ -199,6 +205,6 @@ footer p {
     #control-box {
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr; /*quantas frações firacará dividido os elementos*/ /*pode ser usado (repeat(3, 1fr))*/
-        gap: 2rem;
+        gap: 2rem; /*espaços entre os elementos em linha*/
     }
 }
