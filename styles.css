@@ -128,14 +128,15 @@ header {
     background: var(--color-income);
     color: var(--color-secundary)
 }
-/* Transaction ==========================================================================*/
+
+
+/* Table ==========================================================================*/
 #transaction {
     display: block; /*bloqueio a caixa que contem a tabela*/
     overflow-x: auto; /*quando transborda algo fora da tela, pode-se usar overflow*/
     /*significa que quando nescessário, no eixo x, permite deslisar para os lados*/
 }
 
-/* Table ==========================================================================*/
 #data-table {
     color: var(--color-tertiary);
     width: 100%;
@@ -185,6 +186,32 @@ td.income {
 td.expense {
     color: var(--color-expense);
 }
+/* mpdal ==========================================================================*/
+.modal-overlay {
+    width: 100%; /* ocupe 100% da largura do meu display*/
+    height: 100%; /* ocupe 100% da altura do meu display*/
+
+    background: rgba(0,0,0,0.7); /*red, gren, blue, alpha(transparencia)*/
+    position: fixed; /*fixado na tela*/
+    top: 0; /*retire da posição atual e leve para o topo, mais especificadamente na posição 0 */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden; /*para manter desativado*/
+}
+.modal-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    background: var(--color-main);
+    padding: 2.4rem;
+}
+
 
 /* footer ==========================================================================*/
 footer{
