@@ -47,7 +47,7 @@ const lines = [
         description: 'Placa de Video',
         amount: -247000,
         date: '30/03/2021'
-    }
+    },
 ]
 
 const cashFlow = {
@@ -75,9 +75,11 @@ const ModelTransaction = {
         ModelTransaction.transactionsContainer.appendChild(tr)
     },
     innerHTMLTransaction(transaction){
+        const alternClass = transaction.amount > 0 ? "income" : "expense"
+
         const exampleTransaction =` 
             <td class="description">${transaction.description}</td>
-            <td class="expense">${transaction.amount}</td>
+            <td class=${alternClass}>${transaction.amount}</td>
             <td class="date">${transaction.date}</td>
             <td>
                 <img src="./assets/minus.svg" alt="Remover transação">
@@ -87,8 +89,6 @@ const ModelTransaction = {
         return exampleTransaction
     } 
 }
-
-ModelTransaction.addTransacion(lines[0])
 
 //no caso de um array, posso adicionar forEach, onde para cada elemento roda a função
 lines.forEach(function(transaction){
