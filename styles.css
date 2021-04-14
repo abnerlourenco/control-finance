@@ -83,6 +83,16 @@ button:hover {
 }
 
 .button.cancel {
+    color: var(--color-expense);
+    border-radius: 0.25rem;
+    border: 2px var(--color-expense) solid;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     
 }
 
