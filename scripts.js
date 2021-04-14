@@ -77,9 +77,11 @@ const ModelTransaction = {
     innerHTMLTransaction(transaction){
         const alternClass = transaction.amount > 0 ? "income" : "expense"
 
+        const amount = Utils.formatCurrency(transaction.amount)
+
         const exampleTransaction =` 
             <td class="description">${transaction.description}</td>
-            <td class=${alternClass}>${transaction.amount}</td>
+            <td class=${alternClass}>${amount}</td>
             <td class="date">${transaction.date}</td>
             <td>
                 <img src="./assets/minus.svg" alt="Remover transação">
@@ -88,6 +90,20 @@ const ModelTransaction = {
         
         return exampleTransaction
     } 
+}
+
+const Utils = {
+    formatCurrency(value) {
+        const signal = Number(value) < 0 ? "-" : ""
+
+        value = String(value).replace(/\D/g, "") //replace(ache tudo que nao é numero (global) e troque por vazio)
+
+        value = Number(value) / 100
+
+        value = value.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})
+        
+        return signal + value
+    }
 }
 
 //no caso de um array, posso adicionar forEach, onde para cada elemento roda a função
