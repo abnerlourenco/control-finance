@@ -106,7 +106,7 @@ body {
 /* Header ==========================================================================*/
 header {
     background: var(--color-primary);
-    padding: 2rem 0 10rem;
+    padding: 2rem 0 12rem;
     text-align: center; /*alinhamento do conteudo centralizado*/
 }
 
