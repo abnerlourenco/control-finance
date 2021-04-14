@@ -11,7 +11,7 @@ const Modal = {
     }
 }
 
-const transactions = [
+const lines = [
     {
         id: 1,
         description: 'Desenvolvimento App',
@@ -66,12 +66,13 @@ const cashFlow = {
 }
 
 const ModelTransaction = {
+    transactionsContainer: document.querySelector('#data-table tbody'),
     
-    addTransacion(transaction, index) {
+    addTransacion(line, index) {
         const tr = document.createElement('tr')
-        tr.innerHTML = ModelTransaction.innerHTMLTransaction(transaction)
+        tr.innerHTML = ModelTransaction.innerHTMLTransaction(line)
 
-        console.log(tr.innerHTML)
+        ModelTransaction.transactionsContainer.appendChild(tr)
     },
     innerHTMLTransaction(transaction){
         const exampleTransaction =` 
@@ -87,4 +88,9 @@ const ModelTransaction = {
     } 
 }
 
-ModelTransaction.addTransacion(transactions[0])
+ModelTransaction.addTransacion(lines[0])
+
+//no caso de um array, posso adicionar forEach, onde para cada elemento roda a função
+lines.forEach(function(transaction){
+    ModelTransaction.addTransacion(transaction)
+})
