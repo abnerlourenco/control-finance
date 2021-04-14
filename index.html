@@ -87,7 +87,7 @@
                             <td class="expense">- R$ 63,54</td>
                             <td class="date">30/03/2021</td>
                             <td>
-                                <img src="./assets/minus.svg" alt="Remover transação">
+                                <img src="./assets/minus.svg" alt="Remover transação" onclick="Remove()">
                             </td>
 
                         </tr>
@@ -184,21 +184,7 @@
             <!paragrafo>
         </footer>
 
-        <script>
-            const Modal = {
-                open(){
-                    //Abrir modal
-                    // Adicionar a class active ao model
-                    document.querySelector('.modal-overlay').classList.add('active')
-
-                },
-                close(){
-                    //fechar modal
-                    //remover a class active do model
-                    document.querySelector('.modal-overlay').classList.remove('active')
-
-                }
-            }
+        <script src="./scripts.js">
             
         </script>
         
