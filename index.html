@@ -1,197 +1,208 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>control.Finances</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>control.Finances</title>
+    </head>
 
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&family=Roboto+Slab:wght@200;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&family=Roboto+Slab:wght@200;400;600&display=swap" rel="stylesheet">
 
-<body>
-    <header>
-        <img src="./assets/logoplus.svg" alt="Logo Control Finances">
-    </header>
+    <body>
+        <header>
+            <img src="./assets/logoplus.svg" alt="Logo Control Finances">
+        </header>
 
-    <main class="conteiner">
-        <section id="control-box">
-            <h2 class="sr-only">Fluxo de Caixa</h2>
-            
-            <div class="card income">
-                <h3>
-                    <span>Entradas</span>  <!span mantem os elementos em linha>
-                    <img src="./assets/income.svg" alt="Imagem de entradas">
-                </h3>
-                <p>R$ 5.000,00</p>
-            </div>
-            <div class="card expense">
-                <h3>
-                    <span>Saídas</span>
-                    <img src="./assets/expense.svg" alt="Imagem de saídas"> 
-                </h3>
-                <p>R$ 3.381,20</p>
-            </div>
-            <div class="card total"> <! varias classes em um elemento - basta separar>
-                <h3>
-                    <span>Total</span> 
-                    <img src="./assets/total.svg" alt="Imagem de total">
-                </h3>
-                <p>R$ 1.618,80</p>
-            </div>
-        
-        </section>
-        <section id="transaction">
-            <h2 class="sr-only">Transações</h2>
-
-            <a href="#" class="button new">+ Nova Transação</a> <!colocando a # como ref, não será alterada o página>
-
-
-            <table id="data-table">
+        <main class="conteiner">
+            <section id="control-box">
+                <h2 class="sr-only">Fluxo de Caixa</h2>
                 
-                <thead>
-                    <tr>
-                        <th>Descrição</th>
-                        <th>Valor</th>
-                        <th>Data</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="description">Desenvolvimento App</td>
-                        <td class="income"> R$ 5.000,00</td>
-                        <td class="date">31/03/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </td>
+                <div class="card income">
+                    <h3>
+                        <span>Entradas</span>  <!span mantem os elementos em linha>
+                        <img src="./assets/income.svg" alt="Imagem de entradas">
+                    </h3>
+                    <p>R$ 5.000,00</p>
+                </div>
+                <div class="card expense">
+                    <h3>
+                        <span>Saídas</span>
+                        <img src="./assets/expense.svg" alt="Imagem de saídas"> 
+                    </h3>
+                    <p>R$ 3.381,20</p>
+                </div>
+                <div class="card total"> <! varias classes em um elemento - basta separar>
+                    <h3>
+                        <span>Total</span> 
+                        <img src="./assets/total.svg" alt="Imagem de total">
+                    </h3>
+                    <p>R$ 1.618,80</p>
+                </div>
+            
+            </section>
+            <section id="transaction">
+                <h2 class="sr-only">Transações</h2>
 
-                    </tr>
-                    <tr>
-                        <td class="description">Energia</td>
-                        <td class="expense">- R$ 500,00</td>
-                        <td class="date">31/03/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td class="description">Agua</td>
-                        <td class="expense">- R$ 63,54</td>
-                        <td class="date">30/03/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td class="description">Internet</td>
-                        <td class="expense">- R$ 99,98</td>
-                        <td class="date">30/03/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td class="description">Supermercado</td>
-                        <td class="expense">- R$ 247,68</td>
-                        <td class="date">30/03/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td class="description">Placa de video</td>
-                        <td class="expense">- R$ 2.470,00</td>
-                        <td class="date">30/03/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-        </section>
+                
+                <a href="#" 
+                    class="button new"
+                    onclick="Modal.open()">+ Nova Transação</a> <!colocando a # como ref, não será alterada o página>
 
 
-    </main>
-
-    <div class="modal-overlay active">
-        <div class="modal">
-            <div id="form">
-                <h2>Nova Transação</h2>
-
-                <form action="">
-                    <div class="input-group">
-                        <label 
-                            class="sr-only" 
-                            for="description">Descrição</label> <!não precisa estar visivel, mas deve estar na tela(só para leitores de tela)>
-                        <input 
-                            type="text" 
-                            id="description"
-                            name="description" 
-                            placeholder="Descrição">
-                    </div>
+                <table id="data-table">
                     
-                    <div class="input-group">
-                        <label 
-                            class="sr-only" 
-                            for="amount">Valor</label>
-                        <input 
-                            type="number"
-                            step="0.01"
-                            id="amount" 
-                            name="amount" 
-                            placeholder="0,00">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="description">Desenvolvimento App</td>
+                            <td class="income"> R$ 5.000,00</td>
+                            <td class="date">31/03/2021</td>
+                            <td>
+                                <img src="./assets/minus.svg" alt="Remover transação">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="description">Energia</td>
+                            <td class="expense">- R$ 500,00</td>
+                            <td class="date">31/03/2021</td>
+                            <td>
+                                <img src="./assets/minus.svg" alt="Remover transação">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="description">Agua</td>
+                            <td class="expense">- R$ 63,54</td>
+                            <td class="date">30/03/2021</td>
+                            <td>
+                                <img src="./assets/minus.svg" alt="Remover transação">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="description">Internet</td>
+                            <td class="expense">- R$ 99,98</td>
+                            <td class="date">30/03/2021</td>
+                            <td>
+                                <img src="./assets/minus.svg" alt="Remover transação">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="description">Supermercado</td>
+                            <td class="expense">- R$ 247,68</td>
+                            <td class="date">30/03/2021</td>
+                            <td>
+                                <img src="./assets/minus.svg" alt="Remover transação">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="description">Placa de video</td>
+                            <td class="expense">- R$ 2.470,00</td>
+                            <td class="date">30/03/2021</td>
+                            <td>
+                                <img src="./assets/minus.svg" alt="Remover transação">
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </section>
+        </main>
+
+        <div class="modal-overlay">
+            <div class="modal">
+                <div id="form">
+                    <h2>Nova Transação</h2>
+
+                    <form action="">
+                        <div class="input-group">
+                            <label 
+                                class="sr-only" 
+                                for="description">Descrição</label> <!não precisa estar visivel, mas deve estar na tela(só para leitores de tela)>
+                            <input 
+                                type="text" 
+                                id="description"
+                                name="description" 
+                                placeholder="Descrição">
+                        </div>
                         
-                        <small class="help">
-                            Use o sinal (-) (negativo) para despesas e (,) (virgula) para casas decimais
-                        </small>
-                    </div>
+                        <div class="input-group">
+                            <label 
+                                class="sr-only" 
+                                for="amount">Valor</label>
+                            <input 
+                                type="number"
+                                step="0.01"
+                                id="amount" 
+                                name="amount" 
+                                placeholder="0,00">
+                            
+                            <small class="help">
+                                Use o sinal (-) (negativo) para despesas e (,) (virgula) para casas decimais
+                            </small>
+                        </div>
 
-                    <div class="input-group">
-                        <label 
-                            class="sr-only" 
-                            for="date">Data</label>
-                        <input 
-                            type="date" 
-                            id="date" 
-                            name="date" 
-                            placeholder="Data">
-                    </div>
+                        <div class="input-group">
+                            <label 
+                                class="sr-only" 
+                                for="date">Data</label>
+                            <input 
+                                type="date" 
+                                id="date" 
+                                name="date" 
+                                placeholder="Data">
+                        </div>
 
-                    <div class="input-group actions">
-                        <a href="#" class="button cancel">Cancelar</a>
-                        <button>Salvar</button> <! se tiver mais de um botao no forms, o que for de submeter deve estar type="submit">
-                    </div>
+                        <div class="input-group actions">
+                            <a href="#" class="button cancel" onclick="Modal.close()">Cancelar</a>
+                            <button>Salvar</button> <! se tiver mais de um botao no forms, o que for de submeter deve estar type="submit">
+                        </div>
 
-                </form>
-
-
+                    </form>
+                </div>
             </div>
-            
-            
-
-            
         </div>
-    </div>
 
-    <footer>
-        <p>control.Finances</p>
-        <!paragrafo>
-    </footer>
+        <footer>
+            <p>control.Finances</p>
+            <!paragrafo>
+        </footer>
 
+        <script>
+            const Modal = {
+                open(){
+                    //Abrir modal
+                    // Adicionar a class active ao model
+                    document.querySelector('.modal-overlay').classList.add('active')
 
+                },
+                close(){
+                    //fechar modal
+                    //remover a class active do model
+                    document.querySelector('.modal-overlay').classList.remove('active')
+
+                }
+            }
+            
+        </script>
         
 
-</body>
+    </body>
 
 </html>
