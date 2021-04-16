@@ -52,16 +52,41 @@ const lines = [
 
 const cashFlow = {
     incomes() {
-        //somar as entradas
-
+        let income = 0;
+        //pegar todas as transações
+        lines.forEach(transaction => {
+            //para cada uma, verificar se é maior que zero
+            if (transaction.amount > 0) {
+                //somar em uma variavel 
+                income = income + transaction.amount;
+            }
+        })
+        //e retornar a variavel
+        return income;
     },
     expenses() {
-        //somar as saídas
-
+        let expense = 0;
+        //pegar todas as transações
+        lines.forEach(transaction => {
+            //para cada uma, verificar se é maior que zero
+            if (transaction.amount < 0) {
+                //somar em uma variavel 
+                expense = expense + transaction.amount;
+            }
+        })
+        //e retornar a variavel
+        return expense;
     },
     total() {
-        //entradas - saidas
+        let totaly = 0;
+        //pegar os incomes e expenses e somar
+        lines.forEach(transaction => {
+            totaly += transaction.amount;
+        })
 
+        return totaly;
+
+        //ou simplesmente return lines.incomes() + lines.expenses();
     }
 }
 
@@ -93,9 +118,9 @@ const ModelTransaction = {
     },
     
     updateBalance() {
-        document.getElementById('incomeDisplay').innerHTML = "Soma das entradas"
-        document.getElementById('expenseDisplay').innerHTML = "Soma das saídas"
-        document.getElementById('totalDisplay').innerHTML = "total"
+        document.getElementById('incomeDisplay').innerHTML = Utils.formatCurrency(cashFlow.incomes())
+        document.getElementById('expenseDisplay').innerHTML = Utils.formatCurrency(cashFlow.expenses())
+        document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(cashFlow.total())
     }
 
 }
