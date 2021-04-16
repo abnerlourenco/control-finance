@@ -74,6 +74,7 @@ const ModelTransaction = {
 
         ModelTransaction.transactionsContainer.appendChild(tr)
     },
+
     innerHTMLTransaction(transaction){
         const alternClass = transaction.amount > 0 ? "income" : "expense"
 
@@ -89,7 +90,14 @@ const ModelTransaction = {
         `
         
         return exampleTransaction
-    } 
+    },
+    
+    updateBalance() {
+        document.getElementById('incomeDisplay').innerHTML = "Soma das entradas"
+        document.getElementById('expenseDisplay').innerHTML = "Soma das saídas"
+        document.getElementById('totalDisplay').innerHTML = "total"
+    }
+
 }
 
 const Utils = {
@@ -110,3 +118,5 @@ const Utils = {
 lines.forEach(function(transaction){
     ModelTransaction.addTransacion(transaction)
 })
+
+ModelTransaction.updateBalance()
