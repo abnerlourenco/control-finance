@@ -51,10 +51,18 @@ const lines = [
 ]
 
 const cashFlow = {
+    all: lines,
+
+    add (line){
+        cashFlow.all.push(line)
+
+        console.log(cashFlow.all)
+    },
+
     incomes() {
         let income = 0;
         //pegar todas as transações
-        lines.forEach(transaction => {
+        cashFlow.all.forEach(transaction => {
             //para cada uma, verificar se é maior que zero
             if (transaction.amount > 0) {
                 //somar em uma variavel 
@@ -64,10 +72,11 @@ const cashFlow = {
         //e retornar a variavel
         return income;
     },
+
     expenses() {
         let expense = 0;
         //pegar todas as transações
-        lines.forEach(transaction => {
+        cashFlow.all.forEach(transaction => {
             //para cada uma, verificar se é maior que zero
             if (transaction.amount < 0) {
                 //somar em uma variavel 
@@ -77,10 +86,11 @@ const cashFlow = {
         //e retornar a variavel
         return expense;
     },
+
     total() {
         let totaly = 0;
         //pegar os incomes e expenses e somar
-        lines.forEach(transaction => {
+        cashFlow.all.forEach(transaction => {
             totaly += transaction.amount;
         })
 
@@ -145,3 +155,10 @@ lines.forEach(function(transaction){
 })
 
 ModelTransaction.updateBalance()
+
+cashFlow.add({
+    id: 7,
+    description: 'Notebook',
+    amount: '-600000',
+    date: '01/04/2021'
+})
