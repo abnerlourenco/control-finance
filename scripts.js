@@ -59,6 +59,13 @@ const cashFlow = {
         //chamamos a função reload() do App.
         App.reload();
     },
+    
+    remove(index){
+        //procurar dentro do array, o indice da linha que vai ser removido e remover
+        cashFlow.all.splice(index,1)
+
+        App.reload()
+    },
 
     incomes() {
         let income = 0;
