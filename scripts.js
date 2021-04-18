@@ -56,7 +56,8 @@ const cashFlow = {
     add (line){
         cashFlow.all.push(line)
 
-        console.log(cashFlow.all)
+        //chamamos a função reload() do App.
+        App.reload();
     },
 
     incomes() {
@@ -88,15 +89,7 @@ const cashFlow = {
     },
 
     total() {
-        let totaly = 0;
-        //pegar os incomes e expenses e somar
-        cashFlow.all.forEach(transaction => {
-            totaly += transaction.amount;
-        })
-
-        return totaly;
-
-        //ou simplesmente return lines.incomes() + lines.expenses();
+        return cashFlow.incomes() + cashFlow.expenses();
     }
 }
 
@@ -131,6 +124,10 @@ const ModelTransaction = {
         document.getElementById('incomeDisplay').innerHTML = Utils.formatCurrency(cashFlow.incomes())
         document.getElementById('expenseDisplay').innerHTML = Utils.formatCurrency(cashFlow.expenses())
         document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(cashFlow.total())
+    },
+
+    clearallLines() {
+        ModelTransaction.transactionsContainer.innerHTML = ""
     }
 
 }
@@ -149,6 +146,23 @@ const Utils = {
     }
 }
 
+const App = {
+    init() {
+        //aplicando o inicio, já com a refatoração.
+        cashFlow.all.forEach(transaction => {  //arrow function aplicada
+            ModelTransaction.addTransacion(transaction)
+        })
+
+        ModelTransaction.updateBalance()
+    },
+    reload() {
+        ModelTransaction.clearallLines()
+
+        App.init()
+    },
+}
+
+/*
 //no caso de um array, posso adicionar forEach, onde para cada elemento roda a função
 lines.forEach(function(transaction){
     ModelTransaction.addTransacion(transaction)
@@ -156,9 +170,14 @@ lines.forEach(function(transaction){
 
 ModelTransaction.updateBalance()
 
+
+*/
+
+App.init();
+
 cashFlow.add({
     id: 7,
     description: 'Notebook',
-    amount: '-600000',
+    amount: -600000,
     date: '01/04/2021'
 })
