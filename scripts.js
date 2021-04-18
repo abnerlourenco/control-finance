@@ -11,47 +11,45 @@ const Modal = {
     }
 }
 
-const lines = [
-    {
-        id: 1,
-        description: 'Desenvolvimento App',
-        amount: 500000,
-        date: '23/03/2021'
-    },
-    {
-        id: 2,
-        description: 'Energia',
-        amount: -50000,
-        date: '25/03/2021'
-    },
-    {
-        id: 3,
-        description: 'Agua',
-        amount: -6354,
-        date: '25/03/2021'
-    },
-    {
-        id: 4,
-        description: 'Internet',
-        amount: -9998,
-        date: '25/03/2021'
-    },
-    {
-        id: 4,
-        description: 'Supermercado',
-        amount: -24768,
-        date: '29/03/2021'
-    },
-    {
-        id: 6,
-        description: 'Placa de Video',
-        amount: -247000,
-        date: '30/03/2021'
-    },
-]
-
 const cashFlow = {
-    all: lines,
+    all: [
+        {
+            id: 1,
+            description: 'Desenvolvimento App',
+            amount: 500000,
+            date: '23/03/2021'
+        },
+        {
+            id: 2,
+            description: 'Energia',
+            amount: -50000,
+            date: '25/03/2021'
+        },
+        {
+            id: 3,
+            description: 'Agua',
+            amount: -6354,
+            date: '25/03/2021'
+        },
+        {
+            id: 4,
+            description: 'Internet',
+            amount: -9998,
+            date: '25/03/2021'
+        },
+        {
+            id: 4,
+            description: 'Supermercado',
+            amount: -24768,
+            date: '29/03/2021'
+        },
+        {
+            id: 6,
+            description: 'Placa de Video',
+            amount: -247000,
+            date: '30/03/2021'
+        },
+    ],
 
     add (line){
         cashFlow.all.push(line)
@@ -59,7 +57,7 @@ const cashFlow = {
         //chamamos a função reload() do App.
         App.reload();
     },
-    
+
     remove(index){
         //procurar dentro do array, o indice da linha que vai ser removido e remover
         cashFlow.all.splice(index,1)
@@ -97,7 +95,7 @@ const cashFlow = {
 
     total() {
         return cashFlow.incomes() + cashFlow.expenses();
-    }
+    },
 }
 
 const ModelTransaction = {
