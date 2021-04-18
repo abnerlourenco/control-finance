@@ -154,6 +154,7 @@ const Utils = {
 const App = {
     init() {
         //aplicando o inicio, já com a refatoração.
+        //no caso de um array, posso adicionar forEach, onde para cada elemento roda a função
         cashFlow.all.forEach(transaction => {  //arrow function aplicada
             ModelTransaction.addTransacion(transaction)
         })
@@ -166,17 +167,6 @@ const App = {
         App.init()
     },
 }
-
-/*
-//no caso de um array, posso adicionar forEach, onde para cada elemento roda a função
-lines.forEach(function(transaction){
-    ModelTransaction.addTransacion(transaction)
-})
-
-ModelTransaction.updateBalance()
-
-
-*/
 
 App.init();
 
