@@ -175,4 +175,5 @@ cashFlow.add({
     description: 'Notebook',
     amount: -600000,
     date: '01/04/2021'
-})
+}
+)
