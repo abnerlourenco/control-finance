@@ -23,3 +23,19 @@ Utilização de fontes externas (Google Fonts)
 ## Observações
 - Certifique-se de que as imagens e arquivos de estilo CSS estão na mesma pasta que o arquivo index.html
 - O código ainda não possui validação de formulário ou qualquer outra funcionalidade de back-end, portanto, as transações adicionadas não serão armazenadas permanentemente.
+
+## Implementações Futuras
+
+- Armazenamento de dados: Adicionar uma funcionalidade de back-end para armazenar as transações adicionadas permanentemente. Isso permitiria que o usuário acesse suas transações em qualquer dispositivo ou momento.
+
+- Validação de formulário: Adicionar validação de formulário para garantir que as informações inseridas sejam válidas e precisas. Isso também pode incluir mensagens de erro personalizadas para ajudar o usuário a corrigir informações incorretas.
+
+- Filtros e ordenação: Adicionar filtros e opções de ordenação para as transações, permitindo que o usuário veja as transações de acordo com diferentes critérios, como data, categoria ou tipo.
+
+- Gráficos e relatórios: Adicionar recursos de visualização de dados, como gráficos e relatórios, para ajudar o usuário a entender melhor suas finanças e tomar decisões informadas.
+
+- Categoria e etiquetas: Adicionar opções de categoria e etiquetas para as transações, permitindo que o usuário classifique e organize suas transações de maneira mais fácil.
+
+- Integração com outros sistemas: Integrar o sistema com outras ferramentas financeiras, como contas bancárias ou cartões de crédito, para fornecer uma visão mais completa e precisa das finanças do usuário.
+
+- Segurança: Adicionar medidas de segurança para proteger os dados do usuário, como criptografia e autenticação de usuário.
