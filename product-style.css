@@ -1,0 +1,338 @@
+:root {
+  --color-main: #f2f2f3;
+  --color-primary: #001aff77;
+  --color-secundary: #161616; 
+  --color-contrast: #2140caaf;
+  --color-income: #45e01fbb;
+  --color-expense: #ce2c2c;
+}
+
+* {/* select all components in document*/
+  margin: 0; /*espaçamentos dos elementos*/
+  padding: 0; /*preenchimento dos elementos*/
+  box-sizing: border-box; /*contagem a partir da borda*/
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-main);
+}
+
+.container {
+	display: grid;
+	grid-template-rows: 10vh 82vh 8vh;
+	grid-template-areas: "header" "main" "footer"
+  
+}
+
+/* Header ================================================================= */
+header {
+  background-color: var(--color-primary);
+  color: var(--color-secundary);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
+  grid-area: header;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+}
+
+li a {
+  color: var(--color-secundary);
+  text-decoration: none;
+}
+
+/* Main (area do conteúdo principal) =====================================================*/
+main {
+  overflow: auto;
+  padding: 1.5rem 0 0 0;
+
+  grid-area: main;
+  position: relative;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 10rem auto;
+  grid-template-areas: "topo" "meio";
+
+  justify-items: center;
+}
+
+/* titulo da pagina ===================================================== */
+
+
+.header2-class {
+  width: 40rem;
+
+  grid-area: topo;
+}
+
+.header2-class p {
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.4rem;
+
+  padding: 2rem 0;
+}
+
+/* Campo pesquisar ou filtros da pagina ================================================= */
+
+main form {
+  display: grid;
+  /* align-items: center; */
+
+  grid-template-columns: 4fr 1fr;
+
+  grid-template-areas: "search buttomSearch";
+  column-gap: 2rem;
+}  
+
+/* Campo pesquisa */
+.search-holder {
+  grid-area: search;
+}
+
+/* Botao pesquisar */
+.search-button {
+  grid-area: buttomSearch;
+}
+
+
+.header2-class button {
+  background-color: var(--color-primary);
+  color: var(--color-secundary);
+  border: 1px solid var(--color-secundary);
+  cursor: pointer;
+}
+
+/* Tabela de Produtos ===================================================== */
+
+.table-class {
+  width: 40rem;
+
+  grid-area: meio;
+}
+
+main table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+main table th,
+main table td {
+  border: 1px solid var(--color-secundary);
+  padding: 10px;
+
+  text-align: center;
+}
+
+main table th {
+  background-color: var(--color-primary);
+}
+
+main table td:first-child {
+  text-align: justify;
+}
+
+table td img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+main table th:nth-last-child(2),td:nth-last-child(2) {
+  border-right: none;
+  padding: 0 5px 0 10px;
+}
+
+main table th:last-child,td:last-child {
+  border-left: none;
+  padding: 0 10px 0 5px;
+}
+
+/* Botao Novo Produto ===================================================== */
+
+.adicionar-produtos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
+  right: 1rem;
+  bottom: 1rem;
+
+}
+/* 
+.adicionar-produtos:hover {
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+} */
+
+#btn-adicionar {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--color-contrast);
+
+  border-radius: 80px;
+  background-color: var(--color-primary);
+  color: var(--color-secundary);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.adicionar-produtos:hover #btn-adicionar {
+  width: 120px;
+  height: 60px;
+  border-radius: 30px;
+  transform: scale(1.2);
+  transition: 0.8s;
+  
+}
+
+#btn-adicionar img {
+  height: 2rem;
+  width: 2rem;
+}
+
+#btn-adicionar span {
+  display: none;
+}
+
+#btn-adicionar:hover img{
+  display: none;
+}
+
+#btn-adicionar:hover span{
+  display: initial;
+  color: var(--color-contrast);
+}
+
+/* footer ==========================================================================*/
+footer {
+  display: flex;
+  background-color: var(--color-primary);
+
+  grid-area: footer;
+
+  color: var(--color-secundary);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal =====================================================*/
+.modal {
+    display: none; /* O modal fica escondido por padrão */
+    position: fixed; /* O modal é fixado na tela */
+    z-index: 1; /* O modal fica acima de todos os outros elementos da página */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*Classe adicionada ao clicar para abrir modal */
+.modal.ativo {
+    display: block; /* exibido quando ativo */
+  }
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: var(--color-main);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30rem;
+  }
+  
+  /* Botão para fechar o modal */
+  .btn-fechar {
+    color: #aaa;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btn-fechar:hover,
+  .btn-fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-bottom: 10px;
+  }
+  
+  form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+/* Resposive ==========================================================================*/
+@media (max-width: 400px) {
+  
+  html {
+    font-size: 75%;
+  }
+
+  .table-class, .header2-class {
+    width: 25rem;
+  }
+
+}
+
+@media (min-width: 401px) and (max-width: 670px) {
+  /* Estilos para telas com largura entre 401px e 600px */
+
+  html {
+    font-size: 83%;
+  }
+
+  .table-class, .header2-class {
+    width: 25rem;
+  }
+
+}
+
+@media (min-width: 671px) and (max-width: 1200px) {
+  /* Estilos para telas com largura entre 601px e 900px */
+
+  .table-class, .header2-class {
+    width: 40rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  /* Estilos para telas com largura maior que 901px */
+
+  .table-class, .header2-class {
+    width: 60rem;
+  }
+}

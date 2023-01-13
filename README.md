@@ -1,41 +1,61 @@
-# ControlFinance
-
-## Descrição
-Página web que controla as finanças de uma pessoa ou empresa. Ele possui uma seção de fluxo de caixa onde é exibido o total de entradas, saídas e o saldo total. Também possui uma seção de transações onde é possível adicionar novas transações, visualizar as transações existentes em uma tabela e excluir transações.
-
-## Tecnologias usadas
-- HTML
-- CSS
-- JavaScript
+# Sistema de Gerenciamento de Produtos
+Este é um sistema de gerenciamento de produtos baseado na web que permite acompanhar vendas e estoque, gerenciar clientes e fornecedores e controlar o fluxo de caixa da empresa.
 
 ## Recursos
-Utilização de uma estrutura de tabela para exibir as transações
-Uso de modal para adicionar novas transações
-Implementação de uma seção de fluxo de caixa que exibe entradas, saídas e o saldo total
-Utilização de imagens para ilustrar a seção de fluxo de caixa
-Utilização de fontes externas (Google Fonts)
+- Adicionar, editar e excluir produtos
 
-## Instruções de uso
-1- Faça o download do código
-2- Abra o arquivo index.html em um navegador
-3- Utilize as funções disponíveis na página para adicionar novas transações, visualizar as transações existentes e ver o fluxo de caixa
+- Ver uma lista de produtos fora de estoque
 
-## Observações
-- Certifique-se de que as imagens e arquivos de estilo CSS estão na mesma pasta que o arquivo index.html
-- O código ainda não possui validação de formulário ou qualquer outra funcionalidade de back-end, portanto, as transações adicionadas não serão armazenadas permanentemente.
+- Verificar as últimas vendas
 
-## Implementações Futuras
+- Gerenciar informações de clientes e fornecedores
 
-- Armazenamento de dados: Adicionar uma funcionalidade de back-end para armazenar as transações adicionadas permanentemente. Isso permitiria que o usuário acesse suas transações em qualquer dispositivo ou momento.
+- Controlar o fluxo de caixa da empresa
 
-- Validação de formulário: Adicionar validação de formulário para garantir que as informações inseridas sejam válidas e precisas. Isso também pode incluir mensagens de erro personalizadas para ajudar o usuário a corrigir informações incorretas.
+## Tecnologias
+- HTML, CSS e JavaScript para o front-end
 
-- Filtros e ordenação: Adicionar filtros e opções de ordenação para as transações, permitindo que o usuário veja as transações de acordo com diferentes critérios, como data, categoria ou tipo.
+- MySQL para o banco de dados back-end
 
-- Gráficos e relatórios: Adicionar recursos de visualização de dados, como gráficos e relatórios, para ajudar o usuário a entender melhor suas finanças e tomar decisões informadas.
+- API DOM do JavaScript para manipulação dinâmica de HTML
 
-- Categoria e etiquetas: Adicionar opções de categoria e etiquetas para as transações, permitindo que o usuário classifique e organize suas transações de maneira mais fácil.
 
-- Integração com outros sistemas: Integrar o sistema com outras ferramentas financeiras, como contas bancárias ou cartões de crédito, para fornecer uma visão mais completa e precisa das finanças do usuário.
+## Requisitos
+- Um navegador da web
 
-- Segurança: Adicionar medidas de segurança para proteger os dados do usuário, como criptografia e autenticação de usuário.
+- Um servidor MySQL local ou um host MySQL remoto
+
+## Configuração
+- Clone ou baixe este repositório
+
+- Abra o arquivo **index.html** no seu navegador da web
+
+- Configure um servidor MySQL local ou remoto e crie um banco de dados com o nome meuWebSite
+
+- Modifique as configurações de conexão MySQL no arquivo **database.js** de acordo com a sua configuração
+
+- Execute os scripts SQL no arquivo database.sql para criar as tabelas necessárias e inserir dados de exemplo
+
+## Uso
+- Use a barra de navegação para acessar as diferentes páginas e recursos do sistema
+
+- Clique no botão **"Adicionar Produto"** para abrir a janela modal e adicionar um novo produto ao sistema
+
+- Clique nos links **"Editar"** ou **"Excluir"** ao lado de um produto para editá-lo ou excluí-lo
+
+- Use os campos do formulário para **pesquisar** e **filtrar** os produtos na tabela
+
+## Licença
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
+
+
+### Melhorias a ser implementadas
+Algumas coisas que poderiam ser adicionadas a este código incluem: 
+
+- validação de formulário para garantir que os campos obrigatórios sejam preenchidos antes de adicionar um produto; 
+
+- Mensagens de erro para avisar o usuário quando algum problema ocorrer;
+
+- Funcionalidades de edição dos produtos adicionados;
+
+- Adicionar exclusão de produtos.

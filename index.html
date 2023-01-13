@@ -1,139 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>control.Finances</title>
-    </head>
-
-        <link rel="stylesheet" href="./styles.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&family=Roboto+Slab:wght@200;400;600&display=swap" rel="stylesheet">
-
-    <body>
-        <header>
-            <img src="./assets/logoplus.svg" alt="Logo Control Finances">
-        </header>
-
-        <main class="conteiner">
-            <section id="control-box">
-                <h2 class="sr-only">Fluxo de Caixa</h2>
-                
-                <div class="card income">
-                    <h3>
-                        <span>Entradas</span>  <!-- span mantem os elementos em linha -->
-                        <img src="./assets/income.svg" alt="Imagem de entradas">
-                    </h3>
-                    <p id="incomeDisplay" ></p>
-                </div>
-                <div class="card expense">
-                    <h3>
-                        <span>Saídas</span>
-                        <img src="./assets/expense.svg" alt="Imagem de saídas"> 
-                    </h3>
-                    <p id="expenseDisplay" ></p>
-                </div>
-                <div class="card total"> <!-- varias classes em um elemento - basta separar -->
-                    <h3>
-                        <span>Total</span> 
-                        <img src="./assets/total.svg" alt="Imagem de total">
-                    </h3>
-                    <p id="totalDisplay" ></p>
-                </div>
-            
-            </section>
-            <section id="transaction">
-                <h2 class="sr-only">Transações</h2>
-
-                
-                <a href="#" 
-                    class="button new"
-                    onclick="Modal.open()">+ Nova Transação</a> <!-- colocando a # como ref, não será alterada o página -->
-
-
-                <table id="data-table">
-                    
-                    <thead>
-                        <tr>
-                            <th>Descrição</th>
-                            <th>Valor</th>
-                            <th>Data</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-
-                </table>
-            </section>
-        </main>
-
-        <div class="modal-overlay">
-            <div class="modal">
-                <div id="form">
-                    <h2>Nova Transação</h2>
-
-                    <form action="">
-                        <div class="input-group">
-                            <label 
-                                class="sr-only" 
-                                for="description">Descrição</label> <!-- não precisa estar visivel, mas deve estar na tela(só para leitores de tela) -->
-                            <input 
-                                type="text" 
-                                id="description"
-                                name="description" 
-                                placeholder="Descrição">
-                        </div>
-                        
-                        <div class="input-group">
-                            <label 
-                                class="sr-only" 
-                                for="amount">Valor</label>
-                            <input 
-                                type="number"
-                                step="0.01"
-                                id="amount" 
-                                name="amount" 
-                                placeholder="0,00">
-                            
-                            <small class="help">
-                                Use o sinal (-) (negativo) para despesas e (,) (virgula) para casas decimais
-                            </small>
-                        </div>
-
-                        <div class="input-group">
-                            <label 
-                                class="sr-only" 
-                                for="date">Data</label>
-                            <input 
-                                type="date" 
-                                id="date" 
-                                name="date" 
-                                placeholder="Data">
-                        </div>
-
-                        <div class="input-group actions">
-                            <a href="#" class="button cancel" onclick="Modal.close()">Cancelar</a>
-                            <button>Salvar</button> <!-- se tiver mais de um botao no forms, o que for de submeter deve estar type="submit" -->
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <p>control.Finances</p>
-            <!-- paragrafo -->
-        </footer>
-
-        <script src="./scripts.js">
-            
-        </script>
-        
-
-    </body>
-
+<html>
+  <head>
+    <title>Meu Sistema</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Meu Sistema</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="#">Clientes</a></li>
+          <li><a href="#">Fornecedores</a></li>
+          <li><a href="#">Caixa</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Bem-vindo ao Meu Sistema</h2>
+      <p>Nesta página você pode acessar as principais funcionalidades do sistema, como gerenciamento de vendas e compras, estoque de produtos, informações sobre clientes e fornecedores, e controle do caixa da empresa.</p>
+      <div>
+        <h3>Últimas Vendas</h3>
+        <table>
+          <tr>
+            <th>Data</th>
+            <th>Cliente</th>
+            <th>Produto</th>
+            <th>Preço</th>
+          </tr>
+          <tr>
+            <td>01/01/2022</td>
+            <td>João da Silva</td>
+            <td>Notebook</td>
+            <td>R$ 2.000,00</td>
+          </tr>
+          <tr>
+            <td>03/01/2022</td>
+            <td>Maria Costa</td>
+            <td>Smartphone</td>
+            <td>R$ 1.500,00</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <h3>Produtos em Falta</h3>
+        <ul>
+          <li>Notebook</li>
+          <li>Teclado</li>
+          <li>Mouse</li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <p>Todos os direitos reservados</p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
 </html>
