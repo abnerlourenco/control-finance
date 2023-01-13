@@ -1,7 +1,7 @@
 # ControlFinance
 
 ## Descrição
-Este código é um exemplo de uma página web que controla as finanças de uma pessoa ou empresa. Ele possui uma seção de fluxo de caixa onde é exibido o total de entradas, saídas e o saldo total. Também possui uma seção de transações onde é possível adicionar novas transações, visualizar as transações existentes em uma tabela e excluir transações.
+Página web que controla as finanças de uma pessoa ou empresa. Ele possui uma seção de fluxo de caixa onde é exibido o total de entradas, saídas e o saldo total. Também possui uma seção de transações onde é possível adicionar novas transações, visualizar as transações existentes em uma tabela e excluir transações.
 
 ## Tecnologias usadas
 - HTML
