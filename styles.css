@@ -302,7 +302,24 @@ footer p {
 }
 
 /* Resposive ==========================================================================*/
-@media (min-width: 800px) {/*siginifica: colocar um tamanho reduzido quando a largura do diplay ficar menor que 800px*/
+@media (min-width: 650px) {/*siginifica: colocar um tamanho reduzido quando a largura do diplay ficar menor que 650px*/
+    html {
+        font-size: 87,5%;
+    }
+    #control-box {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; /*quantas frações firacará dividido os elementos*/ /*pode ser usado (repeat(3, 1fr))*/
+        gap: 2rem; /*espaços entre os elementos em linha*/
+    }
+    .card.total{
+        display: flex;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 850px) {/*siginifica: colocar um tamanho reduzido quando a largura do diplay ficar menor que 800px*/
     html {
         font-size: 87,5%;
     }
@@ -310,5 +327,9 @@ footer p {
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr; /*quantas frações firacará dividido os elementos*/ /*pode ser usado (repeat(3, 1fr))*/
         gap: 2rem; /*espaços entre os elementos em linha*/
+    }
+    .card.total{
+        grid-column-start: auto;
+        grid-column-end: auto;
     }
 }
