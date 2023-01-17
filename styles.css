@@ -106,7 +106,7 @@ body {
 /* Header ==========================================================================*/
 header {
     background: var(--color-primary);
-    padding: 2rem 0 12rem;
+    padding: 2rem 0 8rem;
     text-align: center; /*alinhamento do conteudo centralizado*/
 }
 
@@ -118,7 +118,7 @@ header {
 }
 /* Control Box ==========================================================================*/
 #control-box {
-    margin-top: -8rem; /* posição do topo em relação ao elemento de cima*/
+    margin-top: -5rem; /* posição do topo em relação ao elemento de cima*/
 }
 #control-box h2 {
     color: var(--color-secundary);
@@ -309,7 +309,7 @@ footer p {
     #control-box {
         display: grid; 
         grid-template-columns: 1fr 1fr; /*quantas frações firacará dividido os elementos*/ /*pode ser usado (repeat(3, 1fr))*/
-        gap: 2rem; /*espaços entre os elementos em linha*/
+        gap: 0 2rem; /*espaços entre os elementos em linha deixando nulo entre uma linha e outra*/
     }
     .card.total{
         display: flex;
