@@ -104,11 +104,12 @@ const ModelTransaction = {
     addTransacion(line, index) {
         const tr = document.createElement('tr')
         tr.innerHTML = ModelTransaction.innerHTMLTransaction(line)
+        tr.dataset.index = index
 
         ModelTransaction.transactionsContainer.appendChild(tr)
     },
 
-    innerHTMLTransaction(transaction){
+    innerHTMLTransaction(transaction, index){
         const alternClass = transaction.amount > 0 ? "income" : "expense"
 
         const amount = Utils.formatCurrency(transaction.amount)
@@ -118,7 +119,7 @@ const ModelTransaction = {
             <td class=${alternClass}>${amount}</td>
             <td class="date">${transaction.date}</td>
             <td>
-                <img src="./assets/minus.svg" alt="Remover transação">
+                <img onclick="cashFlow.remove(${index})" src="./assets/minus.svg" alt="Remover transação">
             </td>
         `
         
@@ -138,6 +139,18 @@ const ModelTransaction = {
 }
 
 const Utils = {
+
+    formatAmount(value) {
+        value = Number(value) * 100;
+
+        return value;
+    },
+
+    formatDate(date) {
+        const splittedDate = date.split("-")
+        return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
+    },
+
     formatCurrency(value) {
         const signal = Number(value) < 0 ? "-" : ""
 
@@ -151,12 +164,87 @@ const Utils = {
     }
 }
 
+//Trabalhano com a manipulação dos dados do Formulário
+const Form = {
+    // dados que são capturados pelo 
+    description: document.querySelector('input#description'),
+    amount: document.querySelector('input#amount'),
+    date: document.querySelector('input#date'),
+
+    getValues() {
+        return {
+            description: Form.description.value,
+            amount: Form.amount.value,
+            date: Form.date.value,
+        }
+    },
+
+    validateFields() {
+        const { description, amount, date } = Form.getValues();
+
+        // Verificar se algum dos campos está vazio
+        // usando trim() para limpar os espaços vazio no começo e fim da string
+        if(description.trim() === "" || amount.trim() === "" || date.trim() === "" ) {
+            // caso algum campo estiver vazio, vou criar um erro.
+            throw new Error("Por favor, preencha todos os campos")
+        }
+    },
+
+    formatValues() {
+        let { description, amount, date } = Form.getValues();
+
+        amount = Utils.formatAmount(amount);
+        date = Utils.formatDate(date);
+
+        return {
+            description,
+            amount,
+            date,
+        }
+    },
+
+    cleanFields() {
+        Form.description.value = ""
+        Form.amount.value = ""
+        Form.date.value = ""
+    },
+
+    submit(event) {
+        //Removendo o comportamento padrão
+        event.preventDefault();
+
+        // tentar executar os passos 
+        try {
+            // verificar se todas as informações foram preenchidas.
+            Form.validateFields();
+
+            // Formatar os dados para salvar
+            const transaction = Form.formatValues();
+
+            // Salvar os dados
+            cashFlow.add(transaction);
+
+            // Limpar campos do formulário
+            Form.cleanFields();
+
+            // Fechar o Modal
+            Modal.close();
+
+        } catch (error) {
+            // caso surgir erro executar uma função
+            alert(error.message);
+        }
+
+        
+    }
+}
+
 const App = {
     init() {
         //aplicando o inicio, já com a refatoração.
         //no caso de um array, posso adicionar forEach, onde para cada elemento roda a função
-        cashFlow.all.forEach(transaction => {  //arrow function aplicada
-            ModelTransaction.addTransacion(transaction)
+        cashFlow.all.forEach((transaction, index) => {  //arrow function aplicada
+            ModelTransaction.addTransacion(transaction, index)
         })
 
         ModelTransaction.updateBalance()
