@@ -11,45 +11,20 @@ const Modal = {
     }
 }
 
+// Armazenamento dos dados em LocalStorage do Navegador
+const Storage = {
+    get() {
+        // console.log(localStorage)
+        return JSON.parse(localStorage.getItem("control.finances:transactions")) || [/*vazio*/];
+    },
+    set(transactions) {
+        localStorage.setItem("control.finances:transactions",
+        JSON.stringify(transactions))
+    }
+}
+
 const cashFlow = {
-    all: [
-        {
-            id: 1,
-            description: 'Desenvolvimento App',
-            amount: 95000000,
-            date: '23/03/2021'
-        },
-        {
-            id: 2,
-            description: 'Energia',
-            amount: -15000000,
-            date: '25/03/2021'
-        },
-        {
-            id: 3,
-            description: 'Agua',
-            amount: 6000354,
-            date: '25/03/2021'
-        },
-        {
-            id: 4,
-            description: 'Internet',
-            amount: -9998,
-            date: '25/03/2021'
-        },
-        {
-            id: 4,
-            description: 'Supermercado',
-            amount: -24709768,
-            date: '29/03/2021'
-        },
-        {
-            id: 6,
-            description: 'Placa de Video',
-            amount: -247000,
-            date: '30/03/2021'
-        },
-    ],
+    all: Storage.get(),
 
     add (line){
         cashFlow.all.push(line)
@@ -172,7 +147,7 @@ const Utils = {
     }
 }
 
-//Trabalhano com a manipulação dos dados do Formulário
+//Trabalhando com a manipulação dos dados do Formulário
 const Form = {
     // dados que são capturados pelo 
     description: document.querySelector('input#description'),
@@ -250,6 +225,9 @@ const Form = {
     }
 }
 
+Storage.get()
+
+// Funções de execução do App
 const App = {
     init() {
         //aplicando o inicio, já com a refatoração.
@@ -259,6 +237,9 @@ const App = {
         })
 
         ModelTransaction.updateBalance()
+
+        //Ao inciar a aplicação ele reescreve as transações
+        Storage.set(cashFlow.all)
     },
     reload() {
         ModelTransaction.clearallLines()
@@ -269,10 +250,48 @@ const App = {
 
 App.init();
 
-cashFlow.add({
-    id: 7,
-    description: 'Notebook',
-    amount: -600000000,
-    date: '01/04/2021'
-}
-)
+
+all: [
+    {
+        id: 1,
+        description: 'Desenvolvimento App',
+        amount: 95000000,
+        date: '23/03/2021'
+    },
+    {
+        id: 2,
+        description: 'Energia',
+        amount: -15000000,
+        date: '25/03/2021'
+    },
+    {
+        id: 3,
+        description: 'Agua',
+        amount: 6000354,
+        date: '25/03/2021'
+    },
+    {
+        id: 4,
+        description: 'Internet',
+        amount: -9998,
+        date: '25/03/2021'
+    },
+    {
+        id: 4,
+        description: 'Supermercado',
+        amount: -24709768,
+        date: '29/03/2021'
+    },
+    {
+        id: 6,
+        description: 'Placa de Video',
+        amount: -247000,
+        date: '30/03/2021'
+    },
+    {
+        id: 7,
+        description: 'Notebook',
+        amount: -600000000,
+        date: '01/04/2021'
+    },
+]
