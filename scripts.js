@@ -16,19 +16,19 @@ const cashFlow = {
         {
             id: 1,
             description: 'Desenvolvimento App',
-            amount: 500000,
+            amount: 95000000,
             date: '23/03/2021'
         },
         {
             id: 2,
             description: 'Energia',
-            amount: -50000,
+            amount: -15000000,
             date: '25/03/2021'
         },
         {
             id: 3,
             description: 'Agua',
-            amount: -6354,
+            amount: 6000354,
             date: '25/03/2021'
         },
         {
@@ -40,7 +40,7 @@ const cashFlow = {
         {
             id: 4,
             description: 'Supermercado',
-            amount: -24768,
+            amount: -24709768,
             date: '29/03/2021'
         },
         {
@@ -101,14 +101,17 @@ const cashFlow = {
 const ModelTransaction = {
     transactionsContainer: document.querySelector('#data-table tbody'),
     
+
+    // adicionar/criar a linha no novo lançamento
     addTransacion(line, index) {
         const tr = document.createElement('tr')
-        tr.innerHTML = ModelTransaction.innerHTMLTransaction(line)
+        tr.innerHTML = ModelTransaction.innerHTMLTransaction(line, index)
         tr.dataset.index = index
 
         ModelTransaction.transactionsContainer.appendChild(tr)
     },
 
+    // adicionar as colunas da linha na tabela
     innerHTMLTransaction(transaction, index){
         const alternClass = transaction.amount > 0 ? "income" : "expense"
 
@@ -126,12 +129,14 @@ const ModelTransaction = {
         return exampleTransaction
     },
     
+    // Recalculo do fluxo de caixa
     updateBalance() {
         document.getElementById('incomeDisplay').innerHTML = Utils.formatCurrency(cashFlow.incomes())
         document.getElementById('expenseDisplay').innerHTML = Utils.formatCurrency(cashFlow.expenses())
         document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(cashFlow.total())
     },
 
+    //limpar os registros
     clearallLines() {
         ModelTransaction.transactionsContainer.innerHTML = ""
     }
@@ -143,7 +148,10 @@ const Utils = {
     formatAmount(value) {
         value = Number(value) * 100;
 
-        return value;
+        // Usaremos o metodo Math.round() para arredondar o numero, pois alguns bugs acontecem
+        // Exemplo o numero 0.56
+
+        return Math.round(value);
     },
 
     formatDate(date) {
@@ -190,6 +198,7 @@ const Form = {
         }
     },
 
+    // formatar valores do formulário
     formatValues() {
         let { description, amount, date } = Form.getValues();
 
@@ -203,12 +212,14 @@ const Form = {
         }
     },
 
+    // Limpar campos do formulário
     cleanFields() {
         Form.description.value = ""
         Form.amount.value = ""
         Form.date.value = ""
     },
 
+    // Evento de envio da nova transação
     submit(event) {
         //Removendo o comportamento padrão
         event.preventDefault();
@@ -261,7 +272,7 @@ App.init();
 cashFlow.add({
     id: 7,
     description: 'Notebook',
-    amount: -600000,
+    amount: -600000000,
     date: '01/04/2021'
 }
 )

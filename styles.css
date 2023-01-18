@@ -106,7 +106,7 @@ body {
 /* Header ==========================================================================*/
 header {
     background: var(--color-primary);
-    padding: 2rem 0 8rem;
+    padding: 2rem 0 9rem;
     text-align: center; /*alinhamento do conteudo centralizado*/
 }
 
@@ -118,7 +118,7 @@ header {
 }
 /* Control Box ==========================================================================*/
 #control-box {
-    margin-top: -5rem; /* posição do topo em relação ao elemento de cima*/
+    margin-top: -6rem; /* posição do topo em relação ao elemento de cima*/
 }
 #control-box h2 {
     color: var(--color-secundary);
@@ -129,14 +129,22 @@ header {
     font-family: 'Roboto Slab', sans-serif;
     background: var(--color-main);
     padding: 1.5rem 2rem;
-    border-radius: 0.25rem;  /*Arredondamento da borda*/
+    border-radius: 1.5rem;  /*Arredondamento da borda*/
     
     margin-bottom: 2rem;
 }
 
+.card.income {
+    border: 2px solid var(--color-income);
+}
+
+.card.expense {
+    border: 2px solid var(--color-expense);
+}
+
 .card h3 {
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1.2rem;
 
     display: flex; /*permite o comportamento inline dentro do elemento*/
     align-items: center; /*alinhamento centro x centro */
@@ -302,7 +310,7 @@ footer p {
 }
 
 /* Resposive ==========================================================================*/
-@media (min-width: 650px) {/*siginifica: colocar um tamanho reduzido quando a largura do diplay ficar menor que 650px*/
+@media (min-width: 700px) {/*siginifica: colocar um tamanho reduzido quando a largura do diplay ficar menor que 650px*/
     html {
         font-size: 87,5%;
     }
@@ -327,6 +335,9 @@ footer p {
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr; /*quantas frações firacará dividido os elementos*/ /*pode ser usado (repeat(3, 1fr))*/
         gap: 2rem; /*espaços entre os elementos em linha*/
+    }
+    .card p {
+        font-size: 1.5rem;
     }
     .card.total{
         grid-column-start: auto;
