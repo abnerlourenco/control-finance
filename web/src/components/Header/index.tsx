@@ -4,11 +4,20 @@ export function Header() {
     return (
         <header className="header">
             <a href="/">
-                <img src="logo.svg" alt="Logo Control Finances" />
+                <img className="logo" src="logo.svg" alt="Logo" />
             </a>
             
-            <div>
-                
+            <div className="navbar">
+                <div>
+                    <a href="/">Geral</a>
+                </div>
+                <div>
+                    <a href="/">Dashboards</a>
+                </div>
+            </div>
+
+            <div className="perfil">
+                <img className="img-perfil" src="perfil.jpg" alt="" />
             </div>
 
         </header>
