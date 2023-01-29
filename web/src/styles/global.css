@@ -8,12 +8,13 @@
     --white: #FFF;
 
     --green-primary: #6fcf4a;
+    --green-secundary: #a9b9a2;
 
-    --beau-blue: #bfd7ea;
+    --blue-contrast: #c7d9e7;
     --blue-gray: #588EBA;
     --blue-frost: #6792b5;
 
-    --dark-liver: #494850;
+    --dark-liver: #3f3e47;
 
     --red: #f12f21;
 
@@ -36,10 +37,10 @@
 }
 
 body {
-    background: var(--beau-blue);
+    background: var(--blue-contrast);
 }
 
-body, input,textarea, button {
-    font: 500 1rem Inter, sans-serif;
+body, a, input, textarea, button {
+    font: 500 0.8rem Inter, sans-serif;
     color: var(--white);
 }
