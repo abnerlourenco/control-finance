@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFF;
+
+    --green-primary: #6fcf4a;
+
+    --beau-blue: #bfd7ea;
+    --blue-gray: #588EBA;
+    --blue-frost: #6792b5;
+
+    --dark-liver: #494850;
+
+    --red: #f12f21;
+
+    --color-income: #3ba520;
+    --color-expense: #b83b3b;
+
+
+}
+/* min-width: 1201px, min-width: 1024px, min-width: 769px, min-width: 481px */
+@media (max-width: 1023px) {
+    html {
+        font-size: 93,75%; //15px
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87,5%; //14px
+    }
+}
+
+body {
+    background: var(--beau-blue);
+}
+
+body, input,textarea, button {
+    font: 500 1rem Inter, sans-serif;
+    color: var(--white);
+}
