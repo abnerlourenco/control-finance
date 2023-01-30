@@ -5,16 +5,19 @@
 }
 
 :root {
-    --white: #FFF;
-
     --green-primary: #6fcf4a;
-    --green-secundary: #a9b9a2;
 
-    --blue-contrast: #c7d9e7;
-    --blue-gray: #588EBA;
+    --yellow: #FFC380;
+    --yellow-secundary: #FF941A;
+    --liver: #ffffff;
+    --contrast: #4D4B58;
+
+    --green-tertiary: #0B9A11;
+
+
+    --blue-gray: #0a1116;
     --blue-frost: #6792b5;
 
-    --dark-liver: #3f3e47;
 
     --red: #f12f21;
 
@@ -37,7 +40,7 @@
 }
 
 body {
-    background: var(--blue-contrast);
+    background: var(--liver);
 }
 
 body, a, input, textarea, button {

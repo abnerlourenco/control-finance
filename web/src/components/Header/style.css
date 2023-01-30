@@ -6,51 +6,32 @@
     width: 100vw;
     height: 4rem;
 
-    background: var(--blue-frost);
+    background: radial-gradient(58.93% 69.94% at 50% 100%, var(--yellow) 0%, var(--yellow-secundary) 70%);;
 
     padding: 0.5rem 1rem;
 }
 
 a {
-    margin: 0;
-    padding: 0;
-    
     width: 5rem;
     height: 1rem;
 }
 
 .logo {
-    width: 5rem;
+    width: 7rem;
     height: 1rem;
 }
 
 .perfil {
-    display: block;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
     overflow: hidden;
+
+    border: solid 1px var(--contrast);
 }
 
 .img-perfil {
     
     width: 100%;
     height: 100%;
-}
-
-.navbar {
-    height: 1rem;
-    padding-right: 1rem;
-}
-
-.navbar div {
-    display: inline-block;
-
-    right: 0.5rem;
-
-    padding-left: 1rem;
-}
-
-div a {
-    text-decoration: none;
 }
