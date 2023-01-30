@@ -1,4 +1,4 @@
-import "./../Header/style.css"
+import "./style.css"
 
 export function Header() {
     return (
@@ -6,10 +6,18 @@ export function Header() {
             <a href="/">
                 <img className="logo" src="logo-cinza.svg" alt="Logo" />
             </a>
+            <div className="user">
+                <div>
+                    <p>Olá,</p>
+                    <p>Abner Lourenço</p>
+                </div>
 
-            <div className="perfil">
-                <img className="img-perfil" src="perfil.jpg" alt="" />
+                <div className="perfil">
+                    
+                    <img className="img-perfil" src="perfil.jpg" alt="" />
+                </div>
             </div>
+            
 
         </header>
     )

@@ -12,7 +12,7 @@
 }
 
 a {
-    width: 5rem;
+    width: 7rem;
     height: 1rem;
 }
 
@@ -21,9 +21,31 @@ a {
     height: 1rem;
 }
 
+.user {
+    display : flex;
+    align-items: flex-end;
+}
+
+.user  p {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.6rem;
+    font-weight: 300;
+
+    max-width: 8rem;
+    height: 0.8rem;
+    color: var(--contrast);
+    padding-right: 0.5rem;
+    text-align: start;
+}
+
+.user p:last-child {
+    font-weight: 600;
+}
+
 .perfil {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 0.5rem;
     overflow: hidden;
 

@@ -9,7 +9,7 @@
 
     --yellow: #FFC380;
     --yellow-secundary: #FF941A;
-    --liver: #ffffff;
+    --live: #ffffff;
     --contrast: #4D4B58;
 
     --green-tertiary: #0B9A11;
@@ -40,7 +40,7 @@
 }
 
 body {
-    background: var(--liver);
+    background: var(--live);
 }
 
 body, a, input, textarea, button {
