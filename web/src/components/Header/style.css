@@ -1,24 +1,26 @@
-.header {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     width: 100vw;
-    height: 4rem;
+    height: 8rem;
 
     background: radial-gradient(58.93% 69.94% at 50% 100%, var(--yellow) 0%, var(--yellow-secundary) 70%);;
 
-    padding: 0.5rem 1rem;
+    padding: 1rem 3rem 1rem 2rem;
 }
 
 a {
-    width: 7rem;
-    height: 1rem;
+    width: 15rem;
+    height: 4rem;
 }
 
 .logo {
-    width: 7rem;
-    height: 1rem;
+
+    contain: content;
+    width: 15rem;
+    height: 4rem;
 }
 
 .user {
@@ -29,14 +31,18 @@ a {
 .user  p {
     display: flex;
     align-items: flex-end;
-    font-size: 0.6rem;
+    font-size: 1.5rem;
     font-weight: 300;
 
-    max-width: 8rem;
-    height: 0.8rem;
+    max-width: 20rem;
+    height: 2rem;
     color: var(--contrast);
     padding-right: 0.5rem;
     text-align: start;
+}
+
+.user p:first-child {
+    font-size: 1rem;
 }
 
 .user p:last-child {
@@ -44,8 +50,8 @@ a {
 }
 
 .perfil {
-    width: 2rem;
-    height: 2rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 0.5rem;
     overflow: hidden;
 
