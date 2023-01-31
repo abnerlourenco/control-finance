@@ -7,7 +7,7 @@ interface CardProps {
 
 export function Card(props: CardProps) {
    return ( 
-    <div className="Card-container">
+    <div className="card-container">
         <h3>
             <span>{props.operationType}</span>
             <img src={props.imagePath} alt="Imagem de saídas" />

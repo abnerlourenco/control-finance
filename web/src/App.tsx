@@ -10,6 +10,7 @@ export default function App() {
       <Header userFirstName="Abner" userLastName="Lourenço" userPhotoProfile="perfil.jpg"/>
       <Card imagePath="income.svg" operationType="Total Entradas"/>
       <Card imagePath="expense.svg" operationType="Total Saídas"/>
+      <Card imagePath="total.svg" operationType="Total Geral"/>
     </div>
   )
 }
