@@ -1,0 +1,20 @@
+.Card-container {
+    background: var(--contrast);
+
+    width: 10rem;
+    height: 4rem;
+
+    border-radius: 0.5rem;
+    
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+
+    color: white;
+    font-size: 0.6rem;
+}
+
+.Card-container h3 {
+    display: flex;
+    justify-content: space-between;
+    
+}
