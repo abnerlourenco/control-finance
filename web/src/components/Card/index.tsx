@@ -3,6 +3,7 @@ import "./styles.css"
 interface CardProps {
     operationType: string;
     imagePath: string;
+    value: string;
 }
 
 export function Card(props: CardProps) {
@@ -13,7 +14,7 @@ export function Card(props: CardProps) {
             <img src={props.imagePath} alt="Imagem de saídas" />
         </h3>
 
-        <p id="expenseDisplay">R$ 0,00</p>
+        <p id="expenseDisplay">{props.value}</p>
     </div>
    )
 }
