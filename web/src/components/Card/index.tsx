@@ -5,7 +5,9 @@ interface CardProps {
     imagePath: string;
     value: string;
 }
-
+//tentar colocar os valores em um unico card
+// a informação da conta
+// Periodo em evidencia
 export function Card(props: CardProps) {
    return ( 
     <div className="card-container">
